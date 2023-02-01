@@ -11,3 +11,4 @@ vim.opt.title = true
 vim.opt.clipboard='unnamedplus' 
 vim.api.nvim_set_option("clipboard","unnamed")
 
+vim.cmd[[set guicursor=]]
