@@ -10,6 +10,7 @@ function _G.run()
         id = getIdTerminal()
         v.nvim_chan_send(id, sources[1])
         v.nvim_chan_send(id, sources[2])
+        v.nvim_chan_send(id, sources[3])
     else
         print("Java file no found")
     end
@@ -35,8 +36,9 @@ end
 function getSources()
     local fileNameNoEx = vim.fn.expand('%:t:r')
     local fullPath = "cd " ..  vim.fn.expand('%:p:h') .. "\n"
+    local clear = "clear\n"
     local command = "javac -d . -p $PATH_TO_FX --add-modules javafx.controls *.java  && java -p $PATH_TO_FX --add-modules javafx.controls app." .. fileNameNoEx .. "\n"
-    local tab = {fullPath, command}
+    local tab = {fullPath,clear, command}
     return tab
 end
 

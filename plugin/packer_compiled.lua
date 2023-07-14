@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/enf/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["bracey.vim"] = {
+    loaded = true,
+    path = "/home/enf/.local/share/nvim/site/pack/packer/start/bracey.vim",
+    url = "https://github.com/turbio/bracey.vim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/enf/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -88,6 +93,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/enf/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/enf/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -115,6 +125,7 @@ _G.packer_plugins = {
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["monokai-pro.nvim"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16monokai-pro\frequire\0" },
     loaded = true,
     path = "/home/enf/.local/share/nvim/site/pack/packer/start/monokai-pro.nvim",
     url = "https://github.com/loctvl842/monokai-pro.nvim"
@@ -152,7 +163,7 @@ _G.packer_plugins = {
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/enf/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/kyazdani42/nvim-web-devicons"
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -182,6 +193,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: monokai-pro.nvim
+time([[Config for monokai-pro.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16monokai-pro\frequire\0", "config", "monokai-pro.nvim")
+time([[Config for monokai-pro.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

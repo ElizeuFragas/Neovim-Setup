@@ -1,5 +1,5 @@
 require("monokai-pro").setup({
-  transparent_background = true,
+  transparent_background = false,
   italic_comments = true,
   filter = 'classic',
   inc_search = "background", -- underline | background
@@ -13,7 +13,7 @@ require("monokai-pro").setup({
       underline_visible = true,
     },
     indent_blankline = {
-      context_highlight = "default", -- default | pro
+      context_highlight = "classic", -- default | pro
     },
   },
 })

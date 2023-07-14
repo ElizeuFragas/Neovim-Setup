@@ -1,12 +1,15 @@
 require('lualine').setup{
     options = {
         icons_enabled = true,
+        component_separators = { left = '', right = ''},
         theme = 'jellybeans',
+        --theme = 'monokai-pro',
     },
     sections = {
         lualine_a = {'mode'},
-        lualine_b = {'branch', 'diff', 'diagnostics'},
-        lualine_c = {},
+        lualine_b = {'branch', 'diff', {
+            'diagnostics', sources = { 'nvim_diagnostic'}, sections = { 'error', 'warn', 'info', 'hint' }, symbols = {error = 'E', warn = 'W', info = 'I', hint = 'H'},}},
+        lualine_c = {'filename'},
         lualine_x = {'encoding', 'fileformat', 'filetype'},
         lualine_y = {'progress'},
         lualine_z = {'location'}
