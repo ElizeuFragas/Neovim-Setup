@@ -1,3 +1,5 @@
+local cmd = vim.cmd
+
 require("monokai-pro").setup({
   transparent_background = false,
   italic_comments = true,
@@ -17,5 +19,7 @@ require("monokai-pro").setup({
     },
   },
 })
-vim.cmd([[colorscheme monokai-pro]])
+cmd([[colorscheme monokai-pro]])
+cmd([[hi StatusLineNC guibg=#272822]])
+cmd[[hi! link StatusLine Normal]]
 vim.o.termguicolors=true
