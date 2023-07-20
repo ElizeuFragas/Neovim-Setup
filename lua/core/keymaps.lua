@@ -36,16 +36,16 @@ vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-j>', '<C-w>j')
 
 -- Copy content in insert mode
-vim.keymap.set('i', '<Leader>p', '<ESC>pa')  
+vim.keymap.set('i', '<Leader>p', '<ESC>pa')
 
 -- Move to previous tab
-vim.keymap.set('n', '<Leader>,', ':bp<CR>', opt)  
+vim.keymap.set('n', '<Leader>,', ':bp<CR>', opt)
 
 -- Move to next tab
-vim.keymap.set('n', '<Leader>.', ':bn<CR>', opt)  
+vim.keymap.set('n', '<Leader>.', ':bn<CR>', opt)
 
 -- Close tab
-vim.keymap.set('n', '<Leader>n', ':bw<CR>', opt)  
+vim.keymap.set('n', '<Leader>n', ':bw<CR>', opt)
 
 -- Adjust focused splited window
 vim.keymap.set('n', '<Leader>h', ':vert res -5<CR>')
